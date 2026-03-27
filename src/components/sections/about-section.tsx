@@ -19,7 +19,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-serif text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Анна —
+                Анна Калинина —
                 <br />
                 земельный
                 <br />

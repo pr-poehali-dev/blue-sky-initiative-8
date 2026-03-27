@@ -47,11 +47,11 @@ export function ContactSection() {
               }`}
             >
               <h2 className="mb-2 font-serif text-4xl font-light leading-[1.05] tracking-tight text-foreground md:mb-3 md:text-7xl lg:text-8xl">
-                Напишите
-                <br />
-                Анне
+                Связаться
               </h2>
-              <p className="font-mono text-xs text-foreground/60 md:text-base">/ Разберу вашу ситуацию</p>
+              <p className="mt-4 max-w-sm font-sans text-sm leading-relaxed text-foreground/80 md:text-base">
+                Моя задача — не просто продать услугу, а помочь вам принять грамотное и безопасное решение.
+              </p>
             </div>
 
             <div className="space-y-4 md:space-y-8">
