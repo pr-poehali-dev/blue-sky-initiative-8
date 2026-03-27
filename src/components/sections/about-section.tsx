@@ -19,11 +19,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Защищаем
+                Анна —
                 <br />
-                ваши права
+                земельный
                 <br />
-                <span className="text-foreground/40">на землю</span>
+                <span className="text-foreground/40">эксперт</span>
               </h2>
             </div>
 
@@ -34,10 +34,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Мы — команда сертифицированных кадастровых инженеров с многолетним опытом в сфере земельных отношений.
+                Специалист по оформлению земельных участков с юридическим образованием. Помогаю разобраться с землёй и принять грамотное, безопасное решение.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Помогаем собственникам, застройщикам и предприятиям решать земельные вопросы быстро и без лишних проблем.
+                Моя задача — не просто продать услугу, а помочь вам получить реальный результат. Работаю дистанционно по всей России.
               </p>
             </div>
           </div>
@@ -45,9 +45,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "500+", label: "Участков", sublabel: "Оформлено и поставлено на учёт", direction: "right" },
-              { value: "10", label: "Лет", sublabel: "Опыта в земельной экспертизе", direction: "left" },
-              { value: "98%", label: "Побед", sublabel: "В судебных земельных спорах", direction: "right" },
+              { value: "300+", label: "Клиентов", sublabel: "Получили свои участки", direction: "right" },
+              { value: "1", label: "Сутки", sublabel: "Срок подготовки схемы СРЗУ", direction: "left" },
+              { value: "100%", label: "Дистанционно", sublabel: "Работаю по всей России онлайн", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -83,7 +83,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           }`}
           style={{ transitionDelay: "750ms" }}
         >
-          <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
+          <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(5)}>
             Получить консультацию
           </MagneticButton>
           <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>

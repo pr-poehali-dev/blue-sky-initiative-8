@@ -44,11 +44,11 @@ export function ContactSection() {
               }`}
             >
               <h2 className="mb-2 font-sans text-4xl font-light leading-[1.05] tracking-tight text-foreground md:mb-3 md:text-7xl lg:text-8xl">
-                Бесплатная
+                Напишите
                 <br />
-                консультация
+                Анне
               </h2>
-              <p className="font-mono text-xs text-foreground/60 md:text-base">/ Оставьте заявку</p>
+              <p className="font-mono text-xs text-foreground/60 md:text-base">/ Разберу вашу ситуацию</p>
             </div>
 
             <div className="space-y-4 md:space-y-8">
@@ -87,7 +87,7 @@ export function ContactSection() {
                 }`}
                 style={{ transitionDelay: "500ms" }}
               >
-                {["Telegram", "VK", "LinkedIn", "GitHub"].map((social) => (
+                {["Telegram", "VK"].map((social) => (
                   <a
                     key={social}
                     href="#"
@@ -150,7 +150,7 @@ export function ContactSection() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   className="w-full border-b border-foreground/30 bg-transparent py-1.5 text-sm text-foreground placeholder:text-foreground/40 focus:border-foreground/50 focus:outline-none md:py-2 md:text-base"
-                  placeholder="Опишите вашу задачу: межевание, спор, оценка..."
+                  placeholder="Опишите вашу ситуацию — отвечу по делу..."
                 />
               </div>
 
