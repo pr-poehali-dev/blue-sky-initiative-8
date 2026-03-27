@@ -52,6 +52,11 @@ export function ContactSection() {
               <p className="mt-4 max-w-sm font-sans text-sm leading-relaxed text-foreground/80 md:text-base">
                 Моя задача — не просто продать услугу, а помочь вам принять грамотное и безопасное решение.
               </p>
+              <div className="mt-6 inline-block rounded-xl border border-foreground/20 bg-foreground/5 px-5 py-3 backdrop-blur-sm">
+                <p className="font-sans text-sm font-medium leading-snug text-foreground md:text-base">
+                  Не откладывайте своё право на землю —<br />напишите прямо сейчас
+                </p>
+              </div>
             </div>
 
             <div className="space-y-4 md:space-y-8">
