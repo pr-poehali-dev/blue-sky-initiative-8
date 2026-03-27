@@ -66,7 +66,7 @@ def handler(event: dict, context) -> dict:
 
     msg.attach(MIMEText(html, 'html', 'utf-8'))
 
-    with smtplib.SMTP_SSL('smtp.internet.ru', 465) as server:
+    with smtplib.SMTP_SSL('smtp.mail.ru', 465) as server:
         server.login(smtp_user, smtp_password)
         server.sendmail(smtp_user, smtp_user, msg.as_string())
 
