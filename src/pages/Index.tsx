@@ -183,29 +183,29 @@ export default function Index() {
       >
         <Shader className="h-full w-full">
           <Swirl
-            colorA="#1275d8"
-            colorB="#e19136"
-            speed={0.8}
-            detail={0.8}
-            blend={50}
-            coarseX={40}
-            coarseY={40}
-            mediumX={40}
-            mediumY={40}
-            fineX={40}
-            fineY={40}
+            colorA="#c9a84c"
+            colorB="#1a1a1a"
+            speed={0.6}
+            detail={0.7}
+            blend={60}
+            coarseX={35}
+            coarseY={35}
+            mediumX={35}
+            mediumY={35}
+            fineX={35}
+            fineY={35}
           />
           <ChromaFlow
-            baseColor="#0066ff"
-            upColor="#0066ff"
-            downColor="#d1d1d1"
-            leftColor="#e19136"
-            rightColor="#e19136"
-            intensity={0.9}
-            radius={1.8}
-            momentum={25}
+            baseColor="#b8860b"
+            upColor="#d4af37"
+            downColor="#0a0a0a"
+            leftColor="#8b6914"
+            rightColor="#c9a84c"
+            intensity={0.85}
+            radius={1.6}
+            momentum={20}
             maskType="alpha"
-            opacity={0.97}
+            opacity={0.96}
           />
         </Shader>
         <div className="absolute inset-0 bg-black/20" />
@@ -264,7 +264,7 @@ export default function Index() {
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
               <p className="font-mono text-xs text-foreground/90">Земельный эксперт · Юридическое образование · Вся Россия</p>
             </div>
-            <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
+            <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-serif text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
                 Оформлю ваш участок законно и без рисков
               </span>
