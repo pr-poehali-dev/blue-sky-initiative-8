@@ -6,7 +6,7 @@ export function ServicesSection() {
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start items-center px-6 pt-20 md:px-12 md:pt-0 lg:px-16"
+      className="flex min-h-screen w-screen shrink-0 snap-start items-center px-6 py-20 md:px-12 lg:px-16"
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
@@ -41,6 +41,16 @@ export function ServicesSection() {
               title: "Консультация",
               description: "Онлайн или письменный разбор вашей ситуации с конкретными рекомендациями. Без воды — только по делу. 5 000 ₽.",
               direction: "bottom",
+            },
+            {
+              title: "Бесплатный участок льготникам",
+              description: "Помогаю многодетным семьям, инвалидам и участникам СВО получить земельный участок от государства бесплатно — в рамках установленных льгот.",
+              direction: "left",
+            },
+            {
+              title: "Арктический и Дальневосточный гектар",
+              description: "Сопровождение получения бесплатного гектара земли по федеральным программам. Доступно для всех граждан России без ограничений.",
+              direction: "right",
             },
           ].map((service, i) => (
             <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
