@@ -218,13 +218,21 @@ export default function Index() {
       >
         <button
           onClick={() => scrollToSection(0)}
-          className="transition-transform hover:scale-105"
+          className="flex items-center gap-3 transition-transform hover:scale-105"
         >
-          <img
-            src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/files/2e30e5d4-d413-4641-ab6d-71c3ceae2cfb.jpg"
-            alt="Pravonazemlu"
-            className="h-12 w-auto object-contain"
-          />
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="40" height="40" rx="5" stroke="#C9A84C" strokeWidth="1.5" fill="none"/>
+            <path d="M10 30 Q17 26 22 28 Q27 30 34 26" stroke="#C9A84C" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+            <path d="M10 33 Q17 29 22 31 Q27 33 34 29" stroke="#C9A84C" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+            <path d="M10 36 Q17 32 22 34 Q27 36 34 32" stroke="#C9A84C" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+            <path d="M22 26 L22 16" stroke="#4a9e7a" strokeWidth="1.8" strokeLinecap="round"/>
+            <path d="M22 20 C22 20 18 17 17 13 C20 13 23 16 22 20Z" fill="#4a9e7a"/>
+            <path d="M22 18 C22 18 26 15 27 11 C24 11 21 14 22 18Z" fill="#3d8a6a"/>
+          </svg>
+          <div className="flex flex-col items-start leading-tight">
+            <span className="font-serif text-base font-light tracking-widest text-foreground">PRAVONAZEMLU</span>
+            <span className="font-sans text-[10px] tracking-wider text-foreground/60">Анна Калинина · Земельный юрист</span>
+          </div>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
