@@ -263,7 +263,7 @@ export default function Index() {
           <div className="max-w-3xl">
             <div className="mb-8 animate-in fade-in duration-700">
               <img
-                src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/bucket/c4f43b84-b6cc-4b6d-83fd-21a97fa48240.JPG"
+                src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/files/2e30e5d4-d413-4641-ab6d-71c3ceae2cfb.jpg"
                 alt="Pravonazemlu — Анна Калинина, земельный юрист"
                 className="h-28 w-auto object-contain md:h-36"
               />
