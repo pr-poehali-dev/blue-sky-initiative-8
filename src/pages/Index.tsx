@@ -218,12 +218,9 @@ export default function Index() {
       >
         <button
           onClick={() => scrollToSection(0)}
-          className="flex items-center gap-2 transition-transform hover:scale-105"
+          className="transition-transform hover:scale-105"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">P</span>
-          </div>
-          <span className="font-sans text-xl font-semibold tracking-tight text-foreground">PRAVONAZEMLU</span>
+          <span className="font-serif text-xl font-semibold tracking-widest" style={{ color: '#C9A84C', WebkitTextStroke: '0.5px #1a1a1a', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>PRAVONAZEMLU</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
