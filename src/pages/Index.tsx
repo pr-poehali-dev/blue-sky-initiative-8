@@ -225,7 +225,7 @@ export default function Index() {
             alt="Логотип"
             className="h-10 w-auto object-contain"
           />
-          <span className="font-serif text-xl font-semibold tracking-widest" style={{ color: '#C9A84C', WebkitTextStroke: '0.5px #1a1a1a', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>PRAVONAZEMLU</span>
+          <span className="font-sans text-lg font-bold tracking-widest" style={{ color: '#D4A843' }}>PRAVONAZEMLU</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
