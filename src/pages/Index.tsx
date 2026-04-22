@@ -218,8 +218,13 @@ export default function Index() {
       >
         <button
           onClick={() => scrollToSection(0)}
-          className="transition-transform hover:scale-105"
+          className="flex items-center gap-2 transition-transform hover:scale-105"
         >
+          <img
+            src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/bucket/715119dc-6b5d-4d17-ac4a-9f3a06f8fd45.PNG"
+            alt="Логотип"
+            className="h-10 w-auto object-contain"
+          />
           <span className="font-serif text-xl font-semibold tracking-widest" style={{ color: '#C9A84C', WebkitTextStroke: '0.5px #1a1a1a', textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>PRAVONAZEMLU</span>
         </button>
 
