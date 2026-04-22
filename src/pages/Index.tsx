@@ -261,7 +261,7 @@ export default function Index() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Hero Section */}
-        <section className="flex min-h-screen w-screen shrink-0 items-end justify-between px-6 pb-16 pt-24 md:px-12 md:pb-24">
+        <section className="flex min-h-screen w-screen shrink-0 items-center justify-between gap-8 px-6 pt-20 md:px-12 lg:px-16">
           <div className="max-w-xl">
             <div className="mb-4 animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700 w-full">
               <p className="font-mono text-xs text-foreground/90 text-center">Земельный эксперт · Юридическое образование · Вся Россия</p>
@@ -314,12 +314,12 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="hidden animate-in fade-in duration-1000 delay-300 md:flex md:items-end md:pb-4">
+          <div className="hidden animate-in fade-in duration-1000 delay-300 md:block md:shrink-0">
             <img
               src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/files/c50b2d1c-412f-479d-9e4e-90fbce1853d8.jpg"
               alt="Красивый дом на земельном участке"
-              className="w-[480px] rounded-2xl object-cover shadow-2xl"
-              style={{ aspectRatio: '9/16', border: '1px solid rgba(201,168,76,0.2)' }}
+              className="w-[380px] rounded-2xl object-cover shadow-2xl"
+              style={{ height: '70vh', border: '1px solid rgba(201,168,76,0.2)' }}
             />
           </div>
 
