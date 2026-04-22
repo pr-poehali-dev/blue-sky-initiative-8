@@ -261,6 +261,13 @@ export default function Index() {
         {/* Hero Section */}
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
+            <div className="mb-8 animate-in fade-in duration-700">
+              <img
+                src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/bucket/c4f43b84-b6cc-4b6d-83fd-21a97fa48240.JPG"
+                alt="Pravonazemlu — Анна Калинина, земельный юрист"
+                className="h-28 w-auto object-contain md:h-36"
+              />
+            </div>
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
               <p className="font-mono text-xs text-foreground/90">Земельный эксперт · Юридическое образование · Вся Россия</p>
             </div>
