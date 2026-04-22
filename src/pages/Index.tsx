@@ -316,7 +316,7 @@ export default function Index() {
 
           <div className="hidden animate-in fade-in duration-1000 delay-300 md:flex md:items-end md:pb-4">
             <img
-              src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/files/693a419b-e3ea-40b9-ac4f-992c6571a82c.jpg"
+              src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/files/22fe7e30-c7be-4dcd-b242-76de557d2b0c.jpg"
               alt="Красивый дом на земельном участке"
               className="h-[50vh] w-[320px] rounded-2xl object-cover shadow-2xl"
               style={{ border: '1px solid rgba(201,168,76,0.2)' }}
