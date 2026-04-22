@@ -318,7 +318,7 @@ export default function Index() {
             <img
               src="https://cdn.poehali.dev/projects/9f03a55d-1e5f-471c-9937-f7cd9fa168c2/files/c50b2d1c-412f-479d-9e4e-90fbce1853d8.jpg"
               alt="Красивый дом на земельном участке"
-              className="w-[480px] rounded-2xl object-cover shadow-2xl"
+              className="w-[280px] rounded-2xl object-cover shadow-2xl"
               style={{ aspectRatio: '9/16', border: '1px solid rgba(201,168,76,0.2)' }}
             />
           </div>
