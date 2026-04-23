@@ -77,7 +77,7 @@ export function ServicesSection() {
           <p className="font-mono text-xs text-foreground/60 md:text-sm">/ Чем могу помочь</p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+        <div className="grid gap-0 md:grid-cols-2 md:gap-x-16">
           {SERVICES.map((service, i) => (
             <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
           ))}
@@ -118,14 +118,9 @@ function ServiceCard({
 
   return (
     <div
-      className={`group flex flex-col transition-all duration-700 ${getRevealClass()}`}
+      className={`group flex flex-col border-t border-foreground/20 py-4 transition-all duration-700 hover:border-foreground/50 ${getRevealClass()}`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      <div className="mb-3 flex items-center gap-3">
-        <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
-        <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
-      </div>
-
       <h3 className="mb-1.5 font-serif text-lg font-light text-foreground md:text-xl">
         {service.title}
       </h3>
