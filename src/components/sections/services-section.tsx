@@ -67,17 +67,17 @@ export function ServicesSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-12 transition-all duration-700 md:mb-16 ${
+          className={`mb-6 transition-all duration-700 md:mb-8 ${
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
           }`}
         >
-          <h2 className="mb-2 font-serif text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <h2 className="mb-1 font-serif text-3xl font-light tracking-tight text-foreground md:text-4xl lg:text-5xl">
             Услуги
           </h2>
-          <p className="font-mono text-sm text-foreground/60 md:text-base">/ Чем могу помочь</p>
+          <p className="font-mono text-xs text-foreground/60 md:text-sm">/ Чем могу помочь</p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
+        <div className="grid gap-5 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
           {SERVICES.map((service, i) => (
             <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
           ))}
@@ -126,24 +126,24 @@ function ServiceCard({
         <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
       </div>
 
-      <h3 className="mb-2 font-serif text-2xl font-light text-foreground md:text-3xl">
+      <h3 className="mb-1.5 font-serif text-lg font-light text-foreground md:text-xl">
         {service.title}
       </h3>
 
       {service.description && (
-        <p className="mb-3 max-w-sm text-sm leading-relaxed text-foreground/80 md:text-base">
+        <p className="mb-2 max-w-sm text-xs leading-relaxed text-foreground/80 md:text-sm">
           {service.description}
         </p>
       )}
 
       {service.bullets && (
-        <div className="mb-3 max-w-sm">
-          <p className="mb-1 text-sm leading-relaxed text-foreground/80 md:text-base">
+        <div className="mb-2 max-w-sm">
+          <p className="mb-1 text-xs leading-relaxed text-foreground/80 md:text-sm">
             Помогаю получить земельный участок от государства бесплатно:
           </p>
-          <ul className="space-y-1">
+          <ul className="space-y-0.5">
             {service.bullets.map((b, bi) => (
-              <li key={bi} className="flex items-start gap-2 text-sm leading-relaxed text-foreground/80 md:text-base">
+              <li key={bi} className="flex items-start gap-2 text-xs leading-relaxed text-foreground/80 md:text-sm">
                 <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/50" />
                 {b}
               </li>
@@ -153,21 +153,21 @@ function ServiceCard({
       )}
 
       {(service.price || service.term) && (
-        <div className="mb-3 flex flex-wrap gap-3">
+        <div className="mb-2 flex flex-wrap gap-3">
           {service.price && (
-            <span className="font-mono text-sm font-medium text-foreground/90">
+            <span className="font-mono text-xs font-medium text-foreground/90">
               Цена: {service.price}
             </span>
           )}
           {service.term && (
-            <span className="font-mono text-sm text-foreground/60">Срок: {service.term}</span>
+            <span className="font-mono text-xs text-foreground/60">Срок: {service.term}</span>
           )}
         </div>
       )}
 
       <button
         onClick={handleClick}
-        className="mt-auto w-fit rounded-full border border-foreground/30 bg-transparent px-4 py-2 text-sm text-foreground transition-all duration-200 hover:border-foreground/60 hover:bg-foreground/10"
+        className="mt-auto w-fit rounded-full border border-foreground/30 bg-transparent px-3 py-1.5 text-xs text-foreground transition-all duration-200 hover:border-foreground/60 hover:bg-foreground/10"
       >
         {service.buttonLabel}
       </button>
