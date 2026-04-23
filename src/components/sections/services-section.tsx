@@ -1,7 +1,64 @@
 import { useReveal } from "@/hooks/use-reveal"
 
+const SERVICES = [
+  {
+    title: "Подбор и получение участка без торгов",
+    description:
+      "Помогаю получить земельный участок от государства без аукциона под ИЖС, ЛПХ, рекреацию и другие цели. Работаю по всей России.",
+    buttonLabel: "Получить консультацию",
+    href: "#contact",
+    direction: "top",
+  },
+  {
+    title: "Проверка земельного участка",
+    description:
+      "Комплексная проверка перед покупкой или оформлением: анализ рисков, ограничений, ВРИ и градостроительной документации.",
+    price: "от 5 000 ₽",
+    buttonLabel: "Заказать проверку",
+    href: "#contact",
+    direction: "right",
+  },
+  {
+    title: "Схема расположения земельного участка (СРЗУ) в Argo",
+    description: "Подготовка схемы в профессиональной программе Argo.",
+    price: "от 3 000 ₽",
+    term: "до 1 суток",
+    buttonLabel: "Заказать схему",
+    href: "#contact",
+    direction: "left",
+  },
+  {
+    title: "Консультация",
+    description:
+      "Онлайн или письменный разбор вашей ситуации с конкретными рекомендациями. Без воды — только по делу.",
+    price: "5 000 ₽",
+    buttonLabel: "Записаться на консультацию",
+    href: "#contact",
+    direction: "bottom",
+  },
+  {
+    title: "Сопровождение в торгах",
+    description:
+      "Комплексная поддержка участия в аукционах: подбор лота, подготовка и подача документов, представление ваших интересов и оформление результатов.",
+    buttonLabel: "Участвовать в торгах",
+    href: "#contact",
+    direction: "left",
+  },
+  {
+    title: "Бесплатное предоставление земли",
+    description: null,
+    bullets: [
+      "многодетным семьям, инвалидам и участникам СВО (в рамках льгот)",
+      "по программам «Арктический гектар» и «Дальневосточный гектар» (доступно всем гражданам России)",
+    ],
+    buttonLabel: "Узнать, как получить участок бесплатно",
+    href: "#contact",
+    direction: "right",
+  },
+]
+
 export function ServicesSection() {
-  const { ref, isVisible } = useReveal(0.3)
+  const { ref, isVisible } = useReveal(0.2)
 
   return (
     <section
@@ -21,38 +78,7 @@ export function ServicesSection() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
-          {[
-            {
-              title: "Подбор и получение участка",
-              description: "Помогаю получить землю от государства без торгов — ИЖС, ЛПХ, рекреация и другие цели. Работаю по всей России.",
-              direction: "top",
-            },
-            {
-              title: "Схема СРЗУ в Argo",
-              description: "Подготовка схемы расположения земельного участка в программе Argo. От 3 000 ₽, срок — до 1 суток.",
-              direction: "right",
-            },
-            {
-              title: "Проверка участка",
-              description: "Проверка перед покупкой или оформлением: анализ рисков, ограничений, ВРИ и градостроительной документации. От 5 000 ₽.",
-              direction: "left",
-            },
-            {
-              title: "Консультация",
-              description: "Онлайн или письменный разбор вашей ситуации с конкретными рекомендациями. Без воды — только по делу. 5 000 ₽.",
-              direction: "bottom",
-            },
-            {
-              title: "Бесплатный участок льготникам",
-              description: "Помогаю многодетным семьям, инвалидам и участникам СВО получить земельный участок от государства бесплатно — в рамках установленных льгот.",
-              direction: "left",
-            },
-            {
-              title: "Арктический и Дальневосточный гектар",
-              description: "Сопровождение получения бесплатного гектара земли по федеральным программам. Доступно для всех граждан России без ограничений.",
-              direction: "right",
-            },
-          ].map((service, i) => (
+          {SERVICES.map((service, i) => (
             <ServiceCard key={i} service={service} index={i} isVisible={isVisible} />
           ))}
         </div>
@@ -61,46 +87,90 @@ export function ServicesSection() {
   )
 }
 
+type Service = (typeof SERVICES)[number]
+
 function ServiceCard({
   service,
   index,
   isVisible,
 }: {
-  service: { title: string; description: string; direction: string }
+  service: Service
   index: number
   isVisible: boolean
 }) {
   const getRevealClass = () => {
     if (!isVisible) {
       switch (service.direction) {
-        case "left":
-          return "-translate-x-16 opacity-0"
-        case "right":
-          return "translate-x-16 opacity-0"
-        case "top":
-          return "-translate-y-16 opacity-0"
-        case "bottom":
-          return "translate-y-16 opacity-0"
-        default:
-          return "translate-y-12 opacity-0"
+        case "left": return "-translate-x-16 opacity-0"
+        case "right": return "translate-x-16 opacity-0"
+        case "top": return "-translate-y-16 opacity-0"
+        case "bottom": return "translate-y-16 opacity-0"
+        default: return "translate-y-12 opacity-0"
       }
     }
     return "translate-x-0 translate-y-0 opacity-100"
   }
 
+  const handleClick = () => {
+    const el = document.querySelector(service.href)
+    if (el) el.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <div
-      className={`group transition-all duration-700 ${getRevealClass()}`}
-      style={{
-        transitionDelay: `${index * 150}ms`,
-      }}
+      className={`group flex flex-col transition-all duration-700 ${getRevealClass()}`}
+      style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className="mb-3 flex items-center gap-3">
         <div className="h-px w-8 bg-foreground/30 transition-all duration-300 group-hover:w-12 group-hover:bg-foreground/50" />
         <span className="font-mono text-xs text-foreground/60">0{index + 1}</span>
       </div>
-      <h3 className="mb-2 font-serif text-2xl font-light text-foreground md:text-3xl">{service.title}</h3>
-      <p className="max-w-sm text-sm leading-relaxed text-foreground/80 md:text-base">{service.description}</p>
+
+      <h3 className="mb-2 font-serif text-2xl font-light text-foreground md:text-3xl">
+        {service.title}
+      </h3>
+
+      {service.description && (
+        <p className="mb-3 max-w-sm text-sm leading-relaxed text-foreground/80 md:text-base">
+          {service.description}
+        </p>
+      )}
+
+      {service.bullets && (
+        <div className="mb-3 max-w-sm">
+          <p className="mb-1 text-sm leading-relaxed text-foreground/80 md:text-base">
+            Помогаю получить земельный участок от государства бесплатно:
+          </p>
+          <ul className="space-y-1">
+            {service.bullets.map((b, bi) => (
+              <li key={bi} className="flex items-start gap-2 text-sm leading-relaxed text-foreground/80 md:text-base">
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-foreground/50" />
+                {b}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {(service.price || service.term) && (
+        <div className="mb-3 flex flex-wrap gap-3">
+          {service.price && (
+            <span className="font-mono text-sm font-medium text-foreground/90">
+              Цена: {service.price}
+            </span>
+          )}
+          {service.term && (
+            <span className="font-mono text-sm text-foreground/60">Срок: {service.term}</span>
+          )}
+        </div>
+      )}
+
+      <button
+        onClick={handleClick}
+        className="mt-auto w-fit rounded-full border border-foreground/30 bg-transparent px-4 py-2 text-sm text-foreground transition-all duration-200 hover:border-foreground/60 hover:bg-foreground/10"
+      >
+        {service.buttonLabel}
+      </button>
     </div>
   )
 }
